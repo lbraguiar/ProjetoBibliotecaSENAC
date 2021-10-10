@@ -2,6 +2,7 @@ using System;
 using Biblioteca.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 
@@ -12,12 +13,17 @@ namespace Biblioteca.Controllers
         public IActionResult InserirUsuario()
         {
             Autenticacao.CheckLogin(this);
+            Autenticacao.verificaSeUsuarioAdminExiste(this);
+            //return View(new UsuarioService().Listar());
             return View();
         }
 
         [HttpPost]
         public IActionResult InserirUsuario(Usuario u)
         {
+            Autenticacao.CheckLogin(this);
+            Autenticacao.verificaSeUsuarioAdminExiste(this);
+            u.Senha = Criptografo.TextoCriptografado(u.Senha);
             UsuarioService usuarioService = new UsuarioService();
             usuarioService.Inserir(u);       
 
@@ -26,7 +32,9 @@ namespace Biblioteca.Controllers
 
 
         public IActionResult Listagem()
-        {              
+        {
+            Autenticacao.CheckLogin(this);
+            Autenticacao.verificaSeUsuarioAdminExiste(this);              
             UsuarioService user = new UsuarioService();
             List<Usuario> Listagem = user.Listar();
             return View(Listagem);
@@ -35,6 +43,7 @@ namespace Biblioteca.Controllers
         public IActionResult EditarUsuario(int Id)
         {
             Autenticacao.CheckLogin(this);
+            Autenticacao.verificaSeUsuarioAdminExiste(this);
             UsuarioService user = new UsuarioService();
             Usuario u = user.Listar(Id);
             return View(u);
@@ -51,9 +60,24 @@ namespace Biblioteca.Controllers
 
         public IActionResult ExcluirUsuario(int Id)
         {
+            Autenticacao.CheckLogin(this);
+            Autenticacao.verificaSeUsuarioAdminExiste(this);
             UsuarioService user = new UsuarioService();
             user.Excluir(Id);
             return RedirectToAction("Listagem"); 
+        }
+
+        public IActionResult NeedAdmin()
+        {
+            Autenticacao.CheckLogin(this);
+            return View();
+        }
+
+        public IActionResult Sair()
+        {
+            Autenticacao.CheckLogin(this);
+            HttpContext.Session.Clear();
+            return RedirectToAction("/Home/Login");
         }
     }
 }
