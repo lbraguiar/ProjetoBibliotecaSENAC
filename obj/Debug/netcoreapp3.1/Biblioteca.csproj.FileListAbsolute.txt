@@ -52,3 +52,8 @@ M:\02_SENAC\02 - Módulo B\02 - XXXX\ATIVIDADES\ATIVIDADE-01\Biblioteca - netcor
 M:\02_SENAC\02 - Módulo B\02 - XXXX\ATIVIDADES\ATIVIDADE-01\Biblioteca - netcore3.1\Biblioteca2\obj\Debug\netcoreapp3.1\Biblioteca.dll
 M:\02_SENAC\02 - Módulo B\02 - XXXX\ATIVIDADES\ATIVIDADE-01\Biblioteca - netcore3.1\Biblioteca2\obj\Debug\netcoreapp3.1\Biblioteca.pdb
 M:\02_SENAC\02 - Módulo B\02 - XXXX\ATIVIDADES\ATIVIDADE-01\Biblioteca - netcore3.1\Biblioteca2\obj\Debug\netcoreapp3.1\Biblioteca.genruntimeconfig.cache
+M:\02_SENAC\02 - Módulo B\02 - XXXX\ATIVIDADES\ATIVIDADE-01\Biblioteca - netcore3.1\Biblioteca2\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\EditarUsuario.cshtml.g.cs
+M:\02_SENAC\02 - Módulo B\02 - XXXX\ATIVIDADES\ATIVIDADE-01\Biblioteca - netcore3.1\Biblioteca2\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ExcluirUsuario.cshtml.g.cs
+M:\02_SENAC\02 - Módulo B\02 - XXXX\ATIVIDADES\ATIVIDADE-01\Biblioteca - netcore3.1\Biblioteca2\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\InserirUsuario.cshtml.g.cs
+M:\02_SENAC\02 - Módulo B\02 - XXXX\ATIVIDADES\ATIVIDADE-01\Biblioteca - netcore3.1\Biblioteca2\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Listagem.cshtml.g.cs
+M:\02_SENAC\02 - Módulo B\02 - XXXX\ATIVIDADES\ATIVIDADE-01\Biblioteca - netcore3.1\Biblioteca2\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\NeedAdmin.cshtml.g.cs
